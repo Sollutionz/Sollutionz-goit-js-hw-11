@@ -3,12 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <title>Search image...</title>
+    <link rel="stylesheet" href="./sass/index.scss" />    
+    
+    
   </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+  <body>     
+    <div class="form-container">      
+      <form class="search-form" id="search-form">
+        <form class="input-container">
+        <input
+        class="search-input js-input"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button type="submit" class="search-button js-button">
+          <svg xmlns="http://www.w3.org/2000/svg" class="search-icon"width="30" height="30"  viewBox="0 0 24 24">
+            <path  fill-rule="evenodd" d="M9.5 17c1.71 0 3.287-.573 4.55-1.537l4.743 4.744a1 1 0 0 0 1.414-1.414l-4.744-4.744A7.5 7.5 0 1 0 9.5 17zM15 9.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" clip-rule="evenodd"/>
+          </svg>
+           </button>
+        </>
+      </form>
+    </div>
+    <div class="gallery">
+      <!-- Картки зображень -->
+    </div>
+    <button type="button" class="load-more" id="loadMore" disabled>Load more</button>
+
+    
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
